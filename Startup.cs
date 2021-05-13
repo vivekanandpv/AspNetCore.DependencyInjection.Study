@@ -19,9 +19,10 @@ namespace AspNetCore.DependencyInjection.Study
         {
             services.AddControllers();
             
-            //  Transient has the life-time of per resolution
-            services.AddTransient<Person>();
-            services.AddTransient<Car>();
+            //  Single has the life-time of the whole application
+            //  From first resolution to the termination of the application
+            services.AddSingleton<Person>();
+            services.AddSingleton<Car>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
