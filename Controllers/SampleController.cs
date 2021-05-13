@@ -13,9 +13,11 @@ namespace AspNetCore.DependencyInjection.Study.Controllers
     public class SampleController : ControllerBase
     {
         private readonly Person _person;
-        public SampleController(Person person)
+        private readonly Car _car;
+        public SampleController(Person person, Car car)
         {
             _person = person;
+            _car = car;
         }
 
         public IActionResult Get()

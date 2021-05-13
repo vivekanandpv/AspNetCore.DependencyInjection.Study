@@ -19,9 +19,9 @@ namespace AspNetCore.DependencyInjection.Study
         {
             services.AddControllers();
             
-            //  Scoped has the life-time of one HTTP request
-            services.AddScoped<Person>();
-            services.AddScoped<Car>();
+            //  Transient has the life-time of per resolution
+            services.AddTransient<Person>();
+            services.AddTransient<Car>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
