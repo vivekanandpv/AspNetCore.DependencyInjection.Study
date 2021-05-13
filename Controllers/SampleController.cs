@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AspNetCore.DependencyInjection.Study.Dependencies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,10 @@ namespace AspNetCore.DependencyInjection.Study.Controllers
     [ApiController]
     public class SampleController : ControllerBase
     {
-        public SampleController()
+        private readonly Person _person;
+        public SampleController(Person person)
         {
-
+            _person = person;
         }
 
         public IActionResult Get()
