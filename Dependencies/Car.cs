@@ -5,13 +5,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.DependencyInjection.Study.Dependencies
 {
-    public class Person
+    public class Car
     {
-        private readonly Car _car;
-
-        public Person(Car car)
-        {
-            _car = car;
-        }
     }
 }

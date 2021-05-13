@@ -18,7 +18,11 @@ namespace AspNetCore.DependencyInjection.Study
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            //  Order of registration doesn't matter
             services.AddScoped<Person>();   // concrete class dependency
+            services.AddScoped<Car>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
