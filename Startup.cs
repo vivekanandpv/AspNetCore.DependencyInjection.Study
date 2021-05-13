@@ -22,7 +22,6 @@ namespace AspNetCore.DependencyInjection.Study
             //  Order of registration doesn't matter
             services.AddScoped<Person>();   // concrete class dependency
             services.AddScoped<Car>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
