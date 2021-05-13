@@ -11,6 +11,7 @@ namespace AspNetCore.DependencyInjection.Study.Dependencies
 
         public Person(Car car)
         {
+            Console.WriteLine("Person created");
             _car = car;
         }
     }

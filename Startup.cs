@@ -19,8 +19,8 @@ namespace AspNetCore.DependencyInjection.Study
         {
             services.AddControllers();
             
-            //  Order of registration doesn't matter
-            services.AddScoped<Person>();   // concrete class dependency
+            //  Scoped has the life-time of one HTTP request
+            services.AddScoped<Person>();
             services.AddScoped<Car>();
         }
 

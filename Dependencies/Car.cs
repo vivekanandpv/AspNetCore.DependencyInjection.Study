@@ -7,5 +7,9 @@ namespace AspNetCore.DependencyInjection.Study.Dependencies
 {
     public class Car
     {
+        public Car()
+        {
+            Console.WriteLine("Car created");
+        }
     }
 }
